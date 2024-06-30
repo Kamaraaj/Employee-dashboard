@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+-----------------------------------------
+
+1,  Create new application
+      npx create-react-app appname
+      npm install bootstrap
+      npm i react-toastify
+
+2,  Implement Routing
+      npm install react-router-dom
+
+3, Follow these steps to set up and use JSON Server in your frontend application:
+### 1- Install JSON Server - `npm install -g json-server`
+### 2- Create a JSON File - `db.json`
+### 3- Create a JSON File - `Define your data inside the JSON file. This JSON data can be an array of objects or an object with nested objects`
+### 4- Install JSON Server - `json-server --watch db.json --port 8000`
+

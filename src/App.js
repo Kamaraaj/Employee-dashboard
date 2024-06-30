@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import EmpList from "./pages/EmpList";
+import EmpCreate from './pages/EmpCreate';
+import EmpEdit from './pages/EmpEdit';
+import EmpDetails from './pages/EmpDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<EmpList />} />
+        <Route path='employee'>
+        <Route path='create' element={<EmpCreate />} />
+        <Route path='edit/:empid' element={<EmpEdit />} />
+        <Route path='details/:empid' element={<EmpDetails />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+         
+    </React.Fragment>
+
   );
 }
 
